@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle"
+            (click)="collapsed = !collapsed">
+            <span class="icon-bar"
+                *ngFor="let iconBar of [1, 2, 3]"></span>
+        </button>
+        <a routerLink="/" class="navbar-brand">Recipe Book</a>
+    </div>
+    <div class="navbar-collapse" [class.collapse]="collapsed"
+        (window:resize)="collapsed = true">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" (click)="onSelect('recipe')"
+                    href="#">Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="onSelect('shopping-list')"
+                    href="#">Shopping List</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button"
+                    appDropdownDirective>Manage</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Save Data</a></li>
+                    <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</nav>
