@@ -1,5 +1,5 @@
-<a href="#" class="list-group-item d-flex justify-content-between p-3 mt-3"
-    style="border: 1px solid #ccc;" (click)="onSelected()">
+<a class="list-group-item d-flex justify-content-between p-3 mt-3"
+    style="border: 1px solid #ccc; cursor: pointer;" [routerLink]="[index]">
     <div>
         <h4 class="list-group-item-heading">{{recipe.name}}</h4>
         <p class="list-group-item-text">{{recipe.description}}</p>
